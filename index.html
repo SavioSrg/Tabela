@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Classificação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tabela de Classificação</h1>
+
+    <form id="roundForm">
+        <label for="roundNumber">Número da rodada:</label>
+        <input type="number" id="roundNumber" name="roundNumber" min="1" required>
+
+        <label for="participantName">Nome do participante:</label>
+        <input type="text" id="participantName" name="participantName" required>
+
+        <label for="position">Posição:</label>
+        <input type="number" id="position" name="position" min="1" required>
+
+        <button type="submit">Adicionar Resultado</button>
+    </form>
+
+    <table id="classificationTable">
+        <thead>
+            <tr>
+                <th>Nome do participante</th>
+                <th>Total de pontos</th>
+                <th>1º lugar</th>
+                <th>2º lugar</th>
+                <th>3º lugar</th>
+                <th>4º e 5º lugar</th>
+                <th>6º a 10º lugar</th>
+                <th>Total de rodadas</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <p>Critérios de Desempate
+        Se houver dois ou mais participantes com a mesma pontuação total, são aplicados os seguintes critérios de desempate, na ordem apresentada:
+        
+        Número de vitórias em 1º lugar: Quem tiver mais vitórias em 1º lugar será classificado acima dos demais.
+        Número de vitórias em 2º lugar: Caso o empate persista, quem tiver mais 2º lugares será priorizado.
+        Número de vitórias em 3º lugar: Se ainda houver empate, o número de vitórias em 3º lugar será utilizado como critério.
+        Critério adicional (confronto direto): O sistema pode ser expandido para incluir um critério de confronto direto, ou seja, comparar o desempenho dos jogadores em rodadas onde ambos participaram.</p>
+
+        <p>Critérios de Pontuação
+            Os pontos são atribuídos com base na posição que o participante ocupou em cada rodada, conforme a seguinte distribuição:
+            
+            1º lugar: 5 pontos
+            2º lugar: 4 pontos
+            3º lugar: 3 pontos
+            4º e 5º lugar: 2 pontos
+            6º a 10º lugar: 1 ponto
+            Abaixo de 10º lugar: 0 pontos</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
